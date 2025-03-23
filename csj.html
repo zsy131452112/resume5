@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>陈世佳 - 软件工程学生简历</title>
+    <style>
+        :root {
+            --primary: #3F51B5;  /* 专业蓝 */
+            --accent: #FF4081;   /* 强调色 */
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Helvetica Neue', '微软雅黑', sans-serif;
+        }
+
+        body {
+            background: #F8F9FA;
+            line-height: 1.8;
+            color: #37474F;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            background: white;
+            padding: 3rem;
+            border-radius: 1rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        /* 头部区域 */
+        .header {
+            text-align: center;
+            padding-bottom: 2rem;
+            border-bottom: 3px solid var(--primary);
+            margin-bottom: 3rem;
+        }
+
+        .avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin-bottom: 1.5rem;
+            border: 3px solid var(--primary);
+            object-fit: cover;
+        }
+
+        .school {
+            color: var(--primary);
+            font-size: 1.2rem;
+            margin: 0.5rem 0;
+        }
+
+        .contact {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+
+        /* 内容区块 */
+        .section {
+            margin: 2.5rem 0;
+            padding: 1.5rem;
+            background: #FAFAFA;
+            border-radius: 0.8rem;
+            transition: transform 0.2s;
+        }
+
+        .section:hover {
+            transform: translateY(-3px);
+        }
+
+        h2 {
+            color: var(--primary);
+            border-left: 4px solid var(--accent);
+            padding-left: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* 项目展示 */
+        .projects {
+            display: grid;
+            gap: 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+
+        .project {
+            padding: 1.5rem;
+            background: white;
+            border-radius: 0.5rem;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        .tech {
+            display: flex;
+            gap: 0.8rem;
+            flex-wrap: wrap;
+            margin: 1rem 0;
+        }
+
+        .tech span {
+            background: #E8EAF6;
+            color: var(--primary);
+            padding: 0.3rem 1rem;
+            border-radius: 1rem;
+            font-size: 0.9rem;
+        }
+
+        /* 时间轴样式 */
+        .timeline {
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 10px;
+            height: 90%;
+            width: 2px;
+            background: #BDBDBD;
+        }
+
+        .edu-item {
+            position: relative;
+            margin-bottom: 2rem;
+            padding-left: 2rem;
+        }
+
+        .edu-item::before {
+            content: '';
+            position: absolute;
+            left: -9px;
+            top: 5px;
+            width: 16px;
+            height: 16px;
+            background: var(--accent);
+            border-radius: 50%;
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 1rem; }
+            .container { padding: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <!-- 上传头像后取消注释 -->
+            <!-- < img src="avatar.jpg" class="avatar" alt="陈世佳"> -->
+            <h1>陈世佳</h1>
+            <p class="school">华北水利水电大学 软件工程专业（2023级）</p >
+            <div class="contact">
+                <span>📧 chenshijia@stu.ncwu.edu.cn</span>
+                <span>📱 188-1234-5678</span>
+                <span>🌐 github.com/chenshijia</span>
+            </div>
+        </header>
+
+        <section class="section">
+            <h2>技术能力</h2>
+            <div class="tech">
+                <span>Java</span>
+                <span>Python</span>
+                <span>Spring Boot</span>
+                <span>MySQL</span>
+                <span>Vue.js</span>
+                <span>Docker</span>
+                <span>Git</span>
+                <span>Linux</span>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>项目展示</h2>
+            <div class="projects">
+                <div class="project">
+                    <h3>在线考试系统</h3>
+                    <div class="tech">
+                        <span>Spring Boot</span>
+                        <span>Vue.js</span>
+                        <span>Redis</span>
+                    </div>
+                    <ul>
+                        <li>开发题库管理和自动组卷功能</li>
+                        <li>实现考试倒计时和防作弊机制</li>
+                        <li>用户量500+</li>
+                    </ul>
+                </div>
+
+                <div class="project">
+                    <h3>校园跑腿小程序</h3>
+                    <div class="tech">
+                        <span>微信小程序</span>
+                        <span>Node.js</span>
+                        <span>MongoDB</span>
+                    </div>
+                    <ul>
+                        <li>实现订单匹配系统</li>
+                        <li>开发实时聊天功能</li>
+                        <li>日活跃用户200+</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>教育经历</h2>
+            <div class="timeline">
+                <div class="edu-item">
+                    <h3>华北水利水电大学</h3>
+                    <p>2023.09 - 2027.06（在读）</p >
+                    <p>GPA: 3.5/4.0 | 专业排名前20%</p >
+                    <p>主修课程：软件工程、数据结构、数据库原理、计算机组成原理</p >
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>荣誉奖项</h2>
+            <ul>
+                <li>2023年全国大学生计算机设计大赛省级二等奖</li>
+                <li>2022-2023学年校级二等奖学金</li>
+                <li>蓝桥杯Python组省级三等奖</li>
+                <li>校级"科技创新先进个人"</li>
+            </ul>
+        </section>
+    </div>
+</body>
+</html>
